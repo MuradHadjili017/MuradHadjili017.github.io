@@ -1,0 +1,60 @@
+/* style.css — simple, responsive, beginner-friendly */
+:root{
+  --bg:#f8f9fa;
+  --card:#ffffff;
+  --muted:#6c757d;
+  --accent:#0366d6;
+  --accent-600:#034ea8;
+  --text:#222;
+  --radius:8px;
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.5;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:white;border-bottom:1px solid #e6e9ee}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;color:var(--accent);text-decoration:none}
+.primary-navigation ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.primary-navigation a{color:var(--text);text-decoration:none;padding:.5rem}
+.primary-navigation a:hover{color:var(--accent)}
+.nav-toggle{display:none;background:transparent;border:0;font-size:1.2rem}
+.hero{padding:4rem 0;background:linear-gradient(180deg, #fff 0%, #f7fbff 100%);}
+.hero h1{margin:0;font-size:clamp(1.6rem,4vw,2.4rem)}
+.hero p{max-width:60ch;color:var(--muted)}
+.hero-cta .btn{margin-right:.5rem}
+.btn{display:inline-block;background:var(--accent);color:white;padding:.5rem 0.9rem;border-radius:6px;text-decoration:none}
+.btn-outline{background:transparent;border:1px solid var(--accent);color:var(--accent)}
+.features{display:grid;grid-template-columns:1fr;gap:1rem;margin:2rem 0}
+.card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 1px 3px rgba(16,24,40,.05)}
+.contact-card{display:flex;flex-direction:column;gap:.5rem}
+.content h1{margin-top:0}
+.muted{color:var(--muted)}
+.footer-grid{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+.site-footer{border-top:1px solid #e6e9ee;background:white;margin-top:2rem}
+.projects-grid{display:grid;gap:1rem}
+.project-card{background:var(--card);padding:1rem;border-radius:var(--radius)}
+.project-card .muted{margin-top:0}
+.placeholder{opacity:.7}
+@media (min-width:700px){
+  .features{grid-template-columns:2fr 1fr}
+  .nav-toggle{display:none}
+  .primary-navigation{display:block}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:699px){
+  .nav-toggle{display:inline-block}
+  .primary-navigation{display:none}
+  .primary-navigation[aria-hidden="false"]{display:block;background:white;padding:1rem;margin-top:.5rem;border-radius:6px}
+}
+/* Accessibility helpers */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* small utilities */
+.text-center{text-align:center}
