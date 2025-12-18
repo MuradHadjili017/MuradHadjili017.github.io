@@ -42,7 +42,18 @@ body{
 .hero .lead{color:var(--text);max-width:66ch;margin-top:1rem;font-weight:500}
 .hero-cta{margin-top:1.25rem}
 .hero-cta .btn{margin-right:0.75rem}
-.hero .subtle{display:block;margin-top:.6rem;color:var(--muted);font-size:.95rem} 
+.hero .subtle{display:block;margin-top:.6rem;color:var(--muted);font-size:.95rem}
+
+/* Hero layout with profile image */
+.hero-grid{display:block}
+.hero-media{display:flex;justify-content:center;margin-top:1rem}
+.hero-photo{width:220px;height:220px;object-fit:cover;border-radius:14px;border:6px solid rgba(11,99,209,0.06);box-shadow:0 12px 30px rgba(11,99,209,0.08)}
+
+@media (min-width:900px){
+  .hero-grid{display:grid;grid-template-columns:1fr 340px;align-items:center;gap:2rem}
+  .hero-media{margin-top:0}
+  .hero-photo{width:320px;height:320px;border-radius:18px}
+} 
 .btn{display:inline-block;background:var(--accent);color:white;padding:.6rem 1rem;border-radius:10px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(11,99,209,0.08);transition:transform .12s ease,box-shadow .12s ease}
 .btn:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(11,99,209,0.12)}
 .btn:focus{outline:none;box-shadow:var(--focus)}

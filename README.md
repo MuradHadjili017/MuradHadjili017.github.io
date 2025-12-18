@@ -23,6 +23,12 @@ The purpose of this project is to learn the basics of web development and create
 ## Live Website
 https://murdhadjili017.github.io
 
+## Add or replace profile photo
+A placeholder SVG is included at `images/profile.svg`. To use your own photo:
+
+- Add your image to `/images` and name it `profile.jpg` or `profile.png` (or replace `profile.svg`).
+- Recommended size: at least 800×800px for good quality; the site will scale it down responsively.
+
 ## Notes for instructors and reviewers
 - Code is intentionally simple and documented for beginner readability.
 - Accessibility considerations: semantic HTML, keyboard-navigable menu, aria attributes for the mobile menu, and readable color contrasts.
