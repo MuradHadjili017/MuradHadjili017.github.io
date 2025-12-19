@@ -79,6 +79,12 @@ body{
   .project-image img{height:220px}
   .projects-grid{gap:1.5rem}
 }
+
+/* Crop control: keep top of image and crop bottom (used for space debris image) */
+.project-img--top{
+  object-position: center top; /* anchor to top so cropping removes bottom only */
+}
+
 /* Ensure grid remains centered and narrow on very wide screens */
 .projects-section{max-width:1000px;margin-left:auto;margin-right:auto}
 
