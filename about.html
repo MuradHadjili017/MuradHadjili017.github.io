@@ -22,21 +22,86 @@
     </div>
   </header>
 
-  <main class="container content">
-    <h1>About Me</h1>
-    <p>Hello — I’m <strong>Murad Hadjili</strong>. I am a first-year Electrical and Electronics Engineering student at ADA University with a strong academic interest in artificial intelligence, engineering, and design. I am currently focused on building a solid foundation in both theoretical knowledge and practical technical skills.</p>
+  <main class="container content about-page">
 
-    <h2>Current focus</h2>
-    <p>At this stage of my education, I am developing beginner-level experience in: <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong>, <strong>Python</strong>, <strong>Git &amp; GitHub</strong>, and <strong>VS Code</strong>. Through continuous practice and coursework, I aim to strengthen these skills and apply them to real-world engineering challenges.</p>
+    <!-- Hero / Intro -->
+    <section class="about-hero card">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Hi — I’m <span class="name">Murad</span> 👋</h1>
+          <p class="lead">A first‑year Electrical &amp; Electronics Engineering student at ADA University — curious about <strong>AI</strong>, robotics, and elegant design. I build small projects, learn by doing, and enjoy turning ideas into working prototypes.</p>
+          <p class="meta">Quick facts: <span>🎓 ADA University</span> · <span>📚 SITE 1101</span> · <a href="https://github.com/MuradHadjili017" target="_blank" rel="noopener">GitHub</a></p>
+        </div>
+        <figure class="hero-avatar" aria-hidden="true">
+          <img src="/images/profile.jpg" alt="Murad Hadjili" width="160" height="160">
+        </figure>
+      </div>
+    </section>
 
-    <h2>Experience &amp; values</h2>
-    <p>Beyond technical skills, I value problem-solving, creativity, and teamwork. I have gained practical experience through participation in engineering and robotics competitions, where I learned how to work efficiently under pressure and transform ideas into functional solutions.</p>
+    <!-- Cards grid -->
+    <section class="about-grid">
 
-    <h2>Goals</h2>
-    <p>In the future, my goal is to become a highly successful engineer by combining strong engineering principles with modern technologies such as artificial intelligence. This SITE 1101 course plays an important role in my academic journey by helping me understand the fundamentals of web development and digital project creation.</p>
+      <article class="card interest-card" aria-labelledby="interests">
+        <h3 id="interests">Interests ✨</h3>
+        <p class="card-sub">What keeps me excited</p>
+        <ul class="interest-list">
+          <li><span class="emoji">🤖</span> Artificial Intelligence</li>
+          <li><span class="emoji">⚙️</span> Robotics &amp; Embedded Systems</li>
+          <li><span class="emoji">🎨</span> Product Design &amp; UX</li>
+          <li><span class="emoji">🚀</span> Space &amp; Systems Thinking</li>
+        </ul>
+      </article>
 
-    <h2>Contact</h2>
-    <p>Find my work on GitHub: <a href="https://github.com/MuradHadjili017" target="_blank" rel="noopener">github.com/MuradHadjili017</a></p>
+      <article class="card skills-card" aria-labelledby="skills">
+        <h3 id="skills">Skills 🛠️</h3>
+        <p class="card-sub">Current level — honest &amp; actionable</p>
+        <ul class="skills-list">
+          <li>
+            <div class="skill-meta"><strong>Python</strong> <span class="level">Beginner</span></div>
+            <div class="skill-bar"><span style="width:60%" aria-hidden></span></div>
+          </li>
+          <li>
+            <div class="skill-meta"><strong>HTML / CSS</strong> <span class="level">Beginner+</span></div>
+            <div class="skill-bar"><span style="width:70%" aria-hidden></span></div>
+          </li>
+          <li>
+            <div class="skill-meta"><strong>JavaScript</strong> <span class="level">Beginner</span></div>
+            <div class="skill-bar"><span style="width:55%" aria-hidden></span></div>
+          </li>
+          <li>
+            <div class="skill-meta"><strong>Hardware Basics</strong> <span class="level">Beginner</span></div>
+            <div class="skill-bar"><span style="width:50%" aria-hidden></span></div>
+          </li>
+        </ul>
+      </article>
+
+      <article class="card goals-card" aria-labelledby="goals">
+        <h3 id="goals">Goals 🚀</h3>
+        <p class="card-sub">Short & ambitious</p>
+        <ol class="goals-list">
+          <li><strong>Build impactful robots</strong> — learn control systems & real-world sensing.</li>
+          <li><strong>Study AI deeply</strong> — focus on applied learning and ethical design.</li>
+          <li><strong>Join research teams</strong> — collaborate on multidisciplinary projects.</li>
+        </ol>
+      </article>
+
+      <article class="card values-card" aria-labelledby="values">
+        <h3 id="values">Approach & Values 💡</h3>
+        <p class="card-sub">How I like to work</p>
+        <ul class="values-list">
+          <li>Iterative prototyping — test early, learn fast</li>
+          <li>Clear communication & teamwork</li>
+          <li>Practical math & systems intuition</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <!-- Call to action -->
+    <section class="about-cta">
+      <p>Interested in collaborating or mentoring? I’m open to conversations about research, internships, or team projects. <a href="/projects.html">See my work →</a></p>
+    </section>
+
   </main>
 
   <footer class="site-footer">
