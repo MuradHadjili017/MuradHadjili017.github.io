@@ -212,32 +212,7 @@ body:not(.is-entering) main { opacity: 1; transform: none; }
   /* preserve existing small-screen about adjustments for backward compatibility */
 }
 
-/* ===== Navbar modern styles (scoped) ===== */
-.nav-modern{position:relative;z-index:60;background:linear-gradient(180deg,rgba(255,255,255,0.85),rgba(255,255,255,0.72));backdrop-filter:blur(6px);border-bottom:1px solid rgba(10,20,40,0.04);animation:navEntrance .46s ease both}
-.nav-modern .nav-wrap{display:flex;align-items:center;gap:18px;justify-content:space-between;padding:14px 0}
-.brand{display:flex;flex-direction:column;gap:2px;color:var(--text);text-decoration:none}
-.brand-name{font-weight:700;letter-spacing:-0.2px}
-.brand-sub{font-size:.78rem;color:var(--muted);font-weight:600}
-.primary-navigation{display:block}
-.nav-inner{position:relative;display:flex;align-items:center}
-.nav-list{display:flex;gap:12px;margin:0;padding:0;list-style:none}
-.nav-link{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px;color:var(--text);text-decoration:none;font-weight:600;letter-spacing:0.1px;transition:color .22s ease,transform .18s ease}
-.nav-emoji{font-size:1rem;opacity:.95}
-.nav-label{font-size:0.98rem}
-.nav-link:hover{color:var(--accent);transform:translateY(-2px)}
-.nav-link:focus{outline:none;box-shadow:var(--focus);border-radius:10px}
-.nav-indicator{position:absolute;bottom:-8px;height:6px;border-radius:999px;background:linear-gradient(90deg,var(--accent),#007bb8);box-shadow:0 8px 18px rgba(3,102,214,0.08);transition:left .28s cubic-bezier(.2,.9,.2,1),width .28s cubic-bezier(.2,.9,.2,1),opacity .2s;opacity:0}
-.nav-link[aria-current="page"]{color:var(--accent)}
-.nav-toggle{display:none;background:transparent;border:0;font-size:1.2rem;padding:8px;align-items:center}
-@media (max-width:699px){
-  .nav-wrap{gap:12px}
-  .nav-inner{position:static}
-  .nav-list{display:flex;gap:8px}
-  .nav-toggle{display:inline-flex}
-  .nav-indicator{display:none}
-}
-@keyframes navEntrance{from{transform:translateY(-8px);opacity:0}to{transform:none;opacity:1}}
-@media (prefers-reduced-motion: reduce){.nav-modern,.nav-link,.nav-indicator{transition:none !important;animation:none !important}}
+
 
 /* ===== Projects redesigned styles ===== */
 .projects-section{position:relative;padding:24px 0 48px;overflow:visible}

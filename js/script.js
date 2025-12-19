@@ -31,4 +31,61 @@
       if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
     });
   });
+
+  // Page transition animations (exit before navigate, entrance on load)
+  (function(){
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) {
+      const cssTime = getComputedStyle(document.documentElement).getPropertyValue('--page-transition-time');
+      const transitionTime = Number(cssTime.replace(/[^\d]/g,'')) || 380;
+
+      // Add entry class and remove it after the frame to trigger enter animation
+      document.body.classList.add('is-entering');
+      window.addEventListener('DOMContentLoaded', () => {
+        requestAnimationFrame(() => { document.body.classList.remove('is-entering'); });
+      });
+
+      // Intercept internal link clicks to play exit animation first
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest('a');
+        if (!a) return;
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('#') || a.target === '_blank' || a.hasAttribute('download') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+        const url = new URL(href, location.href);
+        if (url.origin !== location.origin) return;
+        // Same-document hash navigation — allow default
+        if (url.pathname === location.pathname && url.search === location.search && url.hash) return;
+
+        e.preventDefault();
+        document.body.classList.add('is-exiting');
+
+        const main = document.querySelector('main');
+        const finish = () => { window.location.href = url.href; };
+
+        if (main) {
+          const onEnd = (ev) => {
+            if (ev && ev.target !== main) return;
+            main.removeEventListener('transitionend', onEnd);
+            finish();
+          };
+          main.addEventListener('transitionend', onEnd);
+          // Fallback timeout in case transitionend doesn't fire
+          setTimeout(() => {
+            main.removeEventListener('transitionend', onEnd);
+            finish();
+          }, transitionTime + 80);
+        } else {
+          setTimeout(finish, transitionTime + 80);
+        }
+      });
+
+      // Clean up classes on pageshow (bfcache)
+      window.addEventListener('pageshow', () => {
+        document.body.classList.remove('is-exiting');
+        document.body.classList.remove('is-entering');
+      });
+    }
+  })();
+
+
 })();

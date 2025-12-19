@@ -8,27 +8,17 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <header class="site-header nav-modern" role="banner">
+  <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="/" aria-label="Murad Hadjili — Home">
-        <span class="brand-name">Murad Hadjili</span>
-        <span class="brand-sub">Engineering • AI • Design</span>
-      </a>
-
-      <nav id="primary-navigation" class="primary-navigation" aria-label="Primary navigation" aria-hidden="false">
-        <div class="nav-inner">
-          <ul class="nav-list" role="menubar">
-            <li role="none"><a role="menuitem" href="/" class="nav-link"><span class="nav-emoji">🏠</span><span class="nav-label">Home</span></a></li>
-            <li role="none"><a role="menuitem" href="/about.html" class="nav-link"><span class="nav-emoji">🎓</span><span class="nav-label">About</span></a></li>
-            <li role="none"><a role="menuitem" href="/projects.html" class="nav-link" aria-current="page"><span class="nav-emoji">🚀</span><span class="nav-label">Projects</span></a></li>
-          </ul>
-          <div class="nav-indicator" aria-hidden="true"></div>
-        </div>
+      <a class="brand" href="/">Murad Hadjili</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">☰</button>
+      <nav id="primary-navigation" class="primary-navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/projects.html" aria-current="page">Projects</a></li>
+        </ul>
       </nav>
-
-      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation" aria-label="Toggle navigation">
-        <span class="hamburger" aria-hidden="true">☰</span>
-      </button>
     </div>
   </header>
 
@@ -162,6 +152,6 @@
   </footer>
 
   <script src="/js/script.js"></script>
-    <script src="/js/navbar.js" defer></script>
+
 </body>
 </html>"},{ 
